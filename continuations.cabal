@@ -1,0 +1,33 @@
+cabal-version:      3.0
+name:               continuations
+
+version:            0.1.0.0
+
+license:            MIT
+
+license-file:       LICENSE
+
+author:             Petros Markopoulos
+
+maintainer:         petrosmarkopoulos01@gmail.com
+
+category:           Language
+build-type:         Simple
+
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+executable continuations
+    import:           warnings
+
+    main-is:          Main.hs
+
+    other-modules: Continuation, Grammar, Language, Parser, Translator
+
+    build-depends:    base ^>=4.16.3.0, parsec
+
+    hs-source-dirs:   src
+
+    default-language: GHC2021
